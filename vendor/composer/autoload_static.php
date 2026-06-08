@@ -437,7 +437,6 @@ class ComposerStaticInitfff9faf052a48ff6e8435864e016dd22
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'TomasVotruba\\ClassLeak\\ClassNameResolver' => __DIR__ . '/../..' . '/src/ClassNameResolver.php',
         'TomasVotruba\\ClassLeak\\Commands\\CheckCommand' => __DIR__ . '/../..' . '/src/Commands/CheckCommand.php',
-        'TomasVotruba\\ClassLeak\\Commands\\ListCommand' => __DIR__ . '/../..' . '/src/Commands/ListCommand.php',
         'TomasVotruba\\ClassLeak\\DependencyInjection\\ContainerFactory' => __DIR__ . '/../..' . '/src/DependencyInjection/ContainerFactory.php',
         'TomasVotruba\\ClassLeak\\FileSystem\\StaticRelativeFilePathHelper' => __DIR__ . '/../..' . '/src/FileSystem/StaticRelativeFilePathHelper.php',
         'TomasVotruba\\ClassLeak\\Filtering\\PossiblyUnusedClassesFilter' => __DIR__ . '/../..' . '/src/Filtering/PossiblyUnusedClassesFilter.php',

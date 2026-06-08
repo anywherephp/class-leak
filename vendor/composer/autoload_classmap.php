@@ -394,7 +394,6 @@ return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'TomasVotruba\\ClassLeak\\ClassNameResolver' => $baseDir . '/src/ClassNameResolver.php',
     'TomasVotruba\\ClassLeak\\Commands\\CheckCommand' => $baseDir . '/src/Commands/CheckCommand.php',
-    'TomasVotruba\\ClassLeak\\Commands\\ListCommand' => $baseDir . '/src/Commands/ListCommand.php',
     'TomasVotruba\\ClassLeak\\DependencyInjection\\ContainerFactory' => $baseDir . '/src/DependencyInjection/ContainerFactory.php',
     'TomasVotruba\\ClassLeak\\FileSystem\\StaticRelativeFilePathHelper' => $baseDir . '/src/FileSystem/StaticRelativeFilePathHelper.php',
     'TomasVotruba\\ClassLeak\\Filtering\\PossiblyUnusedClassesFilter' => $baseDir . '/src/Filtering/PossiblyUnusedClassesFilter.php',
