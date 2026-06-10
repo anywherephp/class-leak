@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitfff9faf052a48ff6e8435864e016dd22
+class ComposerStaticInit815db2540ef4012252b5b0ad5d486350
 {
     public static $prefixLengthsPsr4 = array (
         'T' =>
@@ -53,6 +53,8 @@ class ComposerStaticInitfff9faf052a48ff6e8435864e016dd22
         'ClassLeak202606\\Entropy\\Console\\CommandRegistry' => __DIR__ . '/..' . '/entropy/entropy/src/Console/CommandRegistry.php',
         'ClassLeak202606\\Entropy\\Console\\ConsoleApplication' => __DIR__ . '/..' . '/entropy/entropy/src/Console/ConsoleApplication.php',
         'ClassLeak202606\\Entropy\\Console\\Contract\\CommandInterface' => __DIR__ . '/..' . '/entropy/entropy/src/Console/Contract/CommandInterface.php',
+        'ClassLeak202606\\Entropy\\Console\\Contract\\DefaultCommandInterface' => __DIR__ . '/..' . '/entropy/entropy/src/Console/Contract/DefaultCommandInterface.php',
+        'ClassLeak202606\\Entropy\\Console\\Contract\\HiddenCommandInterface' => __DIR__ . '/..' . '/entropy/entropy/src/Console/Contract/HiddenCommandInterface.php',
         'ClassLeak202606\\Entropy\\Console\\Enum\\Color' => __DIR__ . '/..' . '/entropy/entropy/src/Console/Enum/Color.php',
         'ClassLeak202606\\Entropy\\Console\\Enum\\ExitCode' => __DIR__ . '/..' . '/entropy/entropy/src/Console/Enum/ExitCode.php',
         'ClassLeak202606\\Entropy\\Console\\Exception\\ConsoleInputMappingException' => __DIR__ . '/..' . '/entropy/entropy/src/Console/Exception/ConsoleInputMappingException.php',
@@ -64,6 +66,7 @@ class ComposerStaticInitfff9faf052a48ff6e8435864e016dd22
         'ClassLeak202606\\Entropy\\Console\\Output\\HelpPrinter' => __DIR__ . '/..' . '/entropy/entropy/src/Console/Output/HelpPrinter.php',
         'ClassLeak202606\\Entropy\\Console\\Output\\OutputColorizer' => __DIR__ . '/..' . '/entropy/entropy/src/Console/Output/OutputColorizer.php',
         'ClassLeak202606\\Entropy\\Console\\Output\\OutputPrinter' => __DIR__ . '/..' . '/entropy/entropy/src/Console/Output/OutputPrinter.php',
+        'ClassLeak202606\\Entropy\\Console\\Output\\ProgressBar' => __DIR__ . '/..' . '/entropy/entropy/src/Console/Output/ProgressBar.php',
         'ClassLeak202606\\Entropy\\Console\\Terminal\\Terminal' => __DIR__ . '/..' . '/entropy/entropy/src/Console/Terminal/Terminal.php',
         'ClassLeak202606\\Entropy\\Console\\ValueObject\\Argument' => __DIR__ . '/..' . '/entropy/entropy/src/Console/ValueObject/Argument.php',
         'ClassLeak202606\\Entropy\\Console\\ValueObject\\ArgumentsAndOptions' => __DIR__ . '/..' . '/entropy/entropy/src/Console/ValueObject/ArgumentsAndOptions.php',
@@ -456,9 +459,9 @@ class ComposerStaticInitfff9faf052a48ff6e8435864e016dd22
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitfff9faf052a48ff6e8435864e016dd22::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitfff9faf052a48ff6e8435864e016dd22::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitfff9faf052a48ff6e8435864e016dd22::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit815db2540ef4012252b5b0ad5d486350::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit815db2540ef4012252b5b0ad5d486350::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit815db2540ef4012252b5b0ad5d486350::$classMap;
 
         }, null, ClassLoader::class);
     }
