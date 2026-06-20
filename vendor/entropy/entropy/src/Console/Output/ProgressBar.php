@@ -4,7 +4,6 @@ declare (strict_types=1);
 namespace ClassLeak202606\Entropy\Console\Output;
 
 use ClassLeak202606\Entropy\Attributes\RelatedTest;
-use ClassLeak202606\Entropy\Console\Enum\Color;
 use ClassLeak202606\Entropy\Tests\Console\Output\ProgressBarTest;
 /**
  * Lightweight progress bar rendered on a single, re-written terminal line.
@@ -17,14 +16,17 @@ use ClassLeak202606\Entropy\Tests\Console\Output\ProgressBarTest;
 final class ProgressBar
 {
     /**
-     * @readonly
-     * @var \Entropy\Console\Output\OutputColorizer
-     */
-    private $outputColorizer;
-    /**
      * @var int
      */
     private const BAR_WIDTH = 28;
+    /**
+     * @var string
+     */
+    private const COMPLETE_CHAR = '▓';
+    /**
+     * @var string
+     */
+    private const REMAINING_CHAR = '░';
     /**
      * @var int
      */
@@ -38,9 +40,8 @@ final class ProgressBar
      * @var bool
      */
     private $isSilent;
-    public function __construct(OutputColorizer $outputColorizer)
+    public function __construct()
     {
-        $this->outputColorizer = $outputColorizer;
         // avoid printing to stdout during unit tests
         $this->isSilent = \defined('PHPUNIT_COMPOSER_INSTALL');
     }
@@ -68,15 +69,14 @@ final class ProgressBar
         }
     }
     /**
-     * Pure rendering of the current state, e.g. " 50% [==========>        ] 5/10"
+     * Pure rendering of the current state, e.g. " 5/10 [▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░░░░░]  50%"
      */
     public function render() : string
     {
         $percent = $this->resolvePercent();
         $completeWidth = (int) \floor($percent * self::BAR_WIDTH);
-        $hasArrow = $completeWidth < self::BAR_WIDTH;
-        $bar = \str_repeat('=', $completeWidth) . ($hasArrow ? '>' : '') . \str_repeat(' ', \max(0, self::BAR_WIDTH - $completeWidth - ($hasArrow ? 1 : 0)));
-        return \sprintf('%3d%% [%s] %d/%d', (int) \round($percent * 100), $bar, $this->current, $this->maxSteps);
+        $bar = \str_repeat(self::COMPLETE_CHAR, $completeWidth) . \str_repeat(self::REMAINING_CHAR, \max(0, self::BAR_WIDTH - $completeWidth));
+        return \sprintf('%d/%d [%s] %3d%%', $this->current, $this->maxSteps, $bar, (int) \round($percent * 100));
     }
     private function resolvePercent() : float
     {
@@ -91,6 +91,6 @@ final class ProgressBar
             return;
         }
         // \r returns the cursor to the line start, so the bar is re-written in place
-        \fwrite(\STDOUT, "\r" . $this->outputColorizer->color($this->render(), Color::GREEN));
+        \fwrite(\STDOUT, "\r" . $this->render());
     }
 }

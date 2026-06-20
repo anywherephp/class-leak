@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit815db2540ef4012252b5b0ad5d486350
+class ComposerStaticInit782a543847b4bfa470f475d4bc508579
 {
     public static $prefixLengthsPsr4 = array (
         'T' =>
@@ -52,6 +52,10 @@ class ComposerStaticInit815db2540ef4012252b5b0ad5d486350
         'ClassLeak202606\\Entropy\\Attributes\\RelatedTest' => __DIR__ . '/..' . '/entropy/entropy/src/Attributes/RelatedTest.php',
         'ClassLeak202606\\Entropy\\Console\\CommandRegistry' => __DIR__ . '/..' . '/entropy/entropy/src/Console/CommandRegistry.php',
         'ClassLeak202606\\Entropy\\Console\\ConsoleApplication' => __DIR__ . '/..' . '/entropy/entropy/src/Console/ConsoleApplication.php',
+        'ClassLeak202606\\Entropy\\Console\\ConsoleTable\\ConsoleTable' => __DIR__ . '/..' . '/entropy/entropy/src/Console/ConsoleTable/ConsoleTable.php',
+        'ClassLeak202606\\Entropy\\Console\\ConsoleTable\\ValueObject\\TableRow' => __DIR__ . '/..' . '/entropy/entropy/src/Console/ConsoleTable/ValueObject/TableRow.php',
+        'ClassLeak202606\\Entropy\\Console\\ConsoleTable\\ValueObject\\TableView' => __DIR__ . '/..' . '/entropy/entropy/src/Console/ConsoleTable/ValueObject/TableView.php',
+        'ClassLeak202606\\Entropy\\Console\\ConsoleTable\\ViewRenderer' => __DIR__ . '/..' . '/entropy/entropy/src/Console/ConsoleTable/ViewRenderer.php',
         'ClassLeak202606\\Entropy\\Console\\Contract\\CommandInterface' => __DIR__ . '/..' . '/entropy/entropy/src/Console/Contract/CommandInterface.php',
         'ClassLeak202606\\Entropy\\Console\\Contract\\DefaultCommandInterface' => __DIR__ . '/..' . '/entropy/entropy/src/Console/Contract/DefaultCommandInterface.php',
         'ClassLeak202606\\Entropy\\Console\\Contract\\HiddenCommandInterface' => __DIR__ . '/..' . '/entropy/entropy/src/Console/Contract/HiddenCommandInterface.php',
@@ -459,9 +463,9 @@ class ComposerStaticInit815db2540ef4012252b5b0ad5d486350
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit815db2540ef4012252b5b0ad5d486350::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit815db2540ef4012252b5b0ad5d486350::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit815db2540ef4012252b5b0ad5d486350::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit782a543847b4bfa470f475d4bc508579::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit782a543847b4bfa470f475d4bc508579::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit782a543847b4bfa470f475d4bc508579::$classMap;
 
         }, null, ClassLoader::class);
     }
